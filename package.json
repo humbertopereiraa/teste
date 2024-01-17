@@ -5,9 +5,18 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always",
+    "pack": "electron-builder",
+    "package": "electron-builder -p always",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "humbertopereiraa",
+        "repo": "teste"
+      }
+    ]
   },
   "repository": {
     "type" : "git",
